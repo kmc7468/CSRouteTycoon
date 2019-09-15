@@ -8,7 +8,7 @@ C# RouteTycoon에는 많은 버그가 있으며, 완성되지 않은 기능도 �
 - RouteTycoon 에드온과 호환되는 게임을 만들거나, 또는 본 소스 코드의 일부를 사용 혹은 개선하여 새로운 게임을 만들 때 RouteTycoon이라는 이름을 사용하지 말아주세요.
 
 ## 컴파일 시 필요한 라이브러리
-[npk](https://github.com/lqez/npk)가 필요합니다. 컴파일 후 헤더 파일은 `%NPK_DIRECTORY%/include` 디렉터리에, libnpk.lib 파일은 x86의 경우 `%NPK_DIRECTORY%/lib/Win32`, x64의 경우 `%NPK_DIRECTORY%/lib/x64`에 디렉터리에 복사해 주세요. (NPK_DIRECTORY 환경 변수가 필요합니다.)
+[npk](https://github.com/lqez/npk)가 필요합니다. 컴파일 후 헤더 파일은 `%NPK_DIRECTORY%/include` 디렉터리에, libnpk.lib 파일은 x86의 경우 `%NPK_DIRECTORY%/lib/Win32`, x64의 경우 `%NPK_DIRECTORY%/lib/x64` 디렉터리에 복사해 주세요. (NPK_DIRECTORY 환경 변수가 필요합니다.)
 
 ## 다운로드
 - **소스 코드:** `git clone https://github.com/kmc7468/CSRouteTycoon.git`
