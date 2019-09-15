@@ -16,7 +16,7 @@ namespace RouteTycoon.RTUI
 
 				if (RTAPI.WebAPI.CheckInternetConnection())
 				{
-					byte[] d = new WebClient().DownloadData("https://www.dropbox.com/s/vpd4botg9unnegi/credit.png?dl=1");
+					byte[] d = new WebClient().DownloadData("https://www.dropbox.com/s/4pbxh8ufwd76dfm/credit.png?dl=1");
 					MemoryStream ms = new MemoryStream(d);
 					BackgroundImage = Image.FromStream(ms);
 					ms.Close();
