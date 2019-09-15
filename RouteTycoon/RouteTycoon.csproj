@@ -1,0 +1,776 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9D8E400-B2BF-426E-A413-B26EBBB95A44}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RouteTycoon</RootNamespace>
+    <AssemblyName>RouteTycoon</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>RouteTycoon.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>rt_icon_ico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="KStringExtension, Version=2.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\KStringExtension.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility.Data" />
+    <Reference Include="QuizAPI">
+      <HintPath>.\QuizAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation">
+      <HintPath>.\WinFormAnimation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RTAPI\CalcManager.cs" />
+    <Compile Include="RTAPI\Expansions.cs" />
+    <Compile Include="RTAPI\Graphics\Vector2F.cs" />
+    <Compile Include="RTAPI\ResourceAPI.cs" />
+    <Compile Include="RTAPI\StringAPI.cs" />
+    <Compile Include="RTAPI\TimeAPI.cs" />
+    <Compile Include="RTAPI\WebAPI.cs" />
+    <Compile Include="RTCore\Base\Achievement.cs" />
+    <Compile Include="RTCore\Addon\Train\Coach.cs" />
+    <Compile Include="RTCore\Chat.cs" />
+    <Compile Include="RTCore\Command.cs" />
+    <Compile Include="RTCore\Addon\Map\City.cs" />
+    <Compile Include="RTCore\Company.cs" />
+    <Compile Include="RTCore\Controls\CircularProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTCore\Controls\Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTCore\Controls\PlayScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTCore\Controls\TextButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RTCore\Controls\TitleLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RTCore\Base\News.cs" />
+    <Compile Include="RTCore\Environment.cs" />
+    <Compile Include="RTCore\Exceptions.cs" />
+    <Compile Include="RTCore\Addon\Train\EngineCoach.cs" />
+    <Compile Include="RTCore\Addon\Train\Locomotive.cs" />
+    <Compile Include="RTCore\Log.cs" />
+    <Compile Include="RTCore\Manager\System\AccessManager.cs" />
+    <Compile Include="RTCore\Addon\Achievement.cs" />
+    <Compile Include="RTCore\Manager\Game\AchievementManager.cs" />
+    <Compile Include="RTCore\Manager\Game\ChatManager.cs" />
+    <Compile Include="RTCore\Manager\Game\GameManager.cs" />
+    <Compile Include="RTCore\GameRule.cs" />
+    <Compile Include="RTCore\Manager\System\LogManager.cs" />
+    <Compile Include="RTCore\Manager\Game\NetworkManager.cs" />
+    <Compile Include="RTCore\Manager\Game\NewsManager.cs" />
+    <Compile Include="RTCore\Manager\System\OptionManager.cs" />
+    <Compile Include="RTCore\Manager\System\PageManager.cs" />
+    <Compile Include="RTCore\Manager\System\PluginManager.cs" />
+    <Compile Include="RTCore\Manager\System\ResourceManager.cs" />
+    <Compile Include="RTCore\Manager\Game\RouteManager.cs" />
+    <Compile Include="RTCore\Manager\System\SceneManager.cs" />
+    <Compile Include="RTCore\Manager\System\SoundManager.cs" />
+    <Compile Include="RTCore\Manager\System\TextManager.cs" />
+    <Compile Include="RTCore\Manager\Game\TrainManager.cs" />
+    <Compile Include="RTCore\Addon\Map\Map.cs" />
+    <Compile Include="RTCore\Addon\News\News.cs" />
+    <Compile Include="RTCore\Addon\News\NEWS_SAV.cs" />
+    <Compile Include="RTCore\Plugin\Events.cs" />
+    <Compile Include="RTCore\Plugin\IAchievement.cs" />
+    <Compile Include="RTCore\Plugin\ICompanyPlugin.cs" />
+    <Compile Include="RTCore\Plugin\IGamePlugin.cs" />
+    <Compile Include="RTCore\Plugin\IGameRule.cs" />
+    <Compile Include="RTCore\Plugin\ILogPlugin.cs" />
+    <Compile Include="RTCore\Plugin\INews.cs" />
+    <Compile Include="RTCore\Plugin\IPlugin.cs" />
+    <Compile Include="RTCore\Plugin\IPluginMain.cs" />
+    <Compile Include="RTCore\Addon\Map\Region.cs" />
+    <Compile Include="RTCore\Resource\Route.cs" />
+    <Compile Include="RTCore\Resource\Station.cs" />
+    <Compile Include="RTCore\Resource\Train.cs" />
+    <Compile Include="RTCore\Addon\Train\TrainData.cs" />
+    <Compile Include="RTCore\Addon\Train\TrainParant.cs" />
+    <Compile Include="RTCore\Utility.cs" />
+    <Compile Include="RTUI\EasterEgg\FakeScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\EasterEgg\FakeScene.Designer.cs">
+      <DependentUpon>FakeScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\EasterEgg\OddEvenPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\EasterEgg\OddEvenPage.Designer.cs">
+      <DependentUpon>OddEvenPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\EasterEgg\PickIconScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\EasterEgg\PickIconScene.Designer.cs">
+      <DependentUpon>PickIconScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\frmPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RTUI\frmPage.Designer.cs">
+      <DependentUpon>frmPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\List\AchievementList01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\List\AchievementList01.Designer.cs">
+      <DependentUpon>AchievementList01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\List\CarList01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\List\CarList01.Designer.cs">
+      <DependentUpon>CarList01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\List\CoachList01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\List\CoachList01.Designer.cs">
+      <DependentUpon>CoachList01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\List\CompanyList01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\List\CompanyList01.Designer.cs">
+      <DependentUpon>CompanyList01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\List\EngineCoachList01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\List\EngineCoachList01.Designer.cs">
+      <DependentUpon>EngineCoachList01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\List\LocomotiveList01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\List\LocomotiveList01.Designer.cs">
+      <DependentUpon>LocomotiveList01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\List\NewsList01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\List\NewsList01.Designer.cs">
+      <DependentUpon>NewsList01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\List\RouteList01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\List\RouteList01.Designer.cs">
+      <DependentUpon>RouteList01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\List\StationList01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\List\StationList01.Designer.cs">
+      <DependentUpon>StationList01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\List\StationList02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\List\StationList02.Designer.cs">
+      <DependentUpon>StationList02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\List\TrainList01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\List\TrainList01.Designer.cs">
+      <DependentUpon>TrainList01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\AchievementListPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\AchievementListPage.Designer.cs">
+      <DependentUpon>AchievementListPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\BankPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\BankPage.Designer.cs">
+      <DependentUpon>BankPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\CompanyListPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\CompanyListPage.Designer.cs">
+      <DependentUpon>CompanyListPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\NewsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\NewsPage.Designer.cs">
+      <DependentUpon>NewsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\Operation_Main_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\Operation_Main_Page.Designer.cs">
+      <DependentUpon>Operation_Main_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\RegionInfoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\RegionInfoPage.Designer.cs">
+      <DependentUpon>RegionInfoPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteAdd_Color_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteAdd_Color_Page.Designer.cs">
+      <DependentUpon>RouteAdd_Color_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteAdd_Name_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteAdd_Name_Page.Designer.cs">
+      <DependentUpon>RouteAdd_Name_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteAdd_Stations_List_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteAdd_Stations_List_Page.Designer.cs">
+      <DependentUpon>RouteAdd_Stations_List_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteAdd_Stations_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteAdd_Stations_Page.Designer.cs">
+      <DependentUpon>RouteAdd_Stations_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteAdd_Type_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteAdd_Type_Page.Designer.cs">
+      <DependentUpon>RouteAdd_Type_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteControl_Main_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteControl_Main_Page.Designer.cs">
+      <DependentUpon>RouteControl_Main_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteControl_TrainList_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteControl_TrainList_Page.Designer.cs">
+      <DependentUpon>RouteControl_TrainList_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteInfoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteInfoPage.Designer.cs">
+      <DependentUpon>RouteInfoPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteListPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\RouteListPage.Designer.cs">
+      <DependentUpon>RouteListPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\StationAdd_Etc_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\StationAdd_Etc_Page.Designer.cs">
+      <DependentUpon>StationAdd_Etc_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\StationAdd_Name_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\StationAdd_Name_Page.Designer.cs">
+      <DependentUpon>StationAdd_Name_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\StationAdd_Region_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\StationAdd_Region_Page.Designer.cs">
+      <DependentUpon>StationAdd_Region_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\StationInfoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\StationInfoPage.Designer.cs">
+      <DependentUpon>StationInfoPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainAdd_NameType_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainAdd_NameType_Page.Designer.cs">
+      <DependentUpon>TrainAdd_NameType_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainDataAdd_Args_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainDataAdd_Args_Page.Designer.cs">
+      <DependentUpon>TrainDataAdd_Args_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainDataAdd_Image_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainDataAdd_Image_Page.Designer.cs">
+      <DependentUpon>TrainDataAdd_Image_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainDataAdd_Name_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainDataAdd_Name_Page.Designer.cs">
+      <DependentUpon>TrainDataAdd_Name_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainListPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainListPage.Designer.cs">
+      <DependentUpon>TrainListPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainList_OKAdd_Coach_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainList_OKAdd_Coach_Page.Designer.cs">
+      <DependentUpon>TrainList_OKAdd_Coach_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainList_OKAdd_EngineCoach_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainList_OKAdd_EngineCoach_Page.Designer.cs">
+      <DependentUpon>TrainList_OKAdd_EngineCoach_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainList_OKAdd_Locomotive_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainList_OKAdd_Locomotive_Page.Designer.cs">
+      <DependentUpon>TrainList_OKAdd_Locomotive_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainList_OKAdd_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainList_OKAdd_Page.Designer.cs">
+      <DependentUpon>TrainList_OKAdd_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainWayPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Page\TrainWayPage.Designer.cs">
+      <DependentUpon>TrainWayPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Scene\DefaultCreateGameScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Scene\DefaultCreateGameScene.Designer.cs">
+      <DependentUpon>DefaultCreateGameScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Scene\DeveloperScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Scene\DeveloperScene.Designer.cs">
+      <DependentUpon>DeveloperScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\frmError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RTUI\frmError.Designer.cs">
+      <DependentUpon>frmError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\frmImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RTUI\frmImage.Designer.cs">
+      <DependentUpon>frmImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RTUI\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTCore\Controls\Scene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Scene\GameLoadScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Scene\GameLoadScene.Designer.cs">
+      <DependentUpon>GameLoadScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Scene\GameSettingScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Scene\GameSettingScene.Designer.cs">
+      <DependentUpon>GameSettingScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Scene\ResSettingScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Scene\ResSettingScene.Designer.cs">
+      <DependentUpon>ResSettingScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Scene\LangSettingScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Scene\LangSettingScene.Designer.cs">
+      <DependentUpon>LangSettingScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Scene\MainPlayScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Scene\MainPlayScene.Designer.cs">
+      <DependentUpon>MainPlayScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Scene\NewGameScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Scene\NewGameScene.Designer.cs">
+      <DependentUpon>NewGameScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Scene\GameStartScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Scene\GameStartScene.Designer.cs">
+      <DependentUpon>GameStartScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Scene\LogoScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Scene\LogoScene.Designer.cs">
+      <DependentUpon>LogoScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Scene\MainMenuScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Scene\MainMenuScene.Designer.cs">
+      <DependentUpon>MainMenuScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Scene\SettingScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Scene\SettingScene.Designer.cs">
+      <DependentUpon>SettingScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Scene\SoundSettingScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Scene\SoundSettingScene.Designer.cs">
+      <DependentUpon>SoundSettingScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Scene\UpdateingScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Scene\UpdateingScene.Designer.cs">
+      <DependentUpon>UpdateingScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RTUI\Scene\UpdateSettingScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RTUI\Scene\UpdateSettingScene.Designer.cs">
+      <DependentUpon>UpdateSettingScene.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RTCore\Controls\Page.resx">
+      <DependentUpon>Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTCore\Controls\Scene.resx">
+      <DependentUpon>Scene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\EasterEgg\FakeScene.resx">
+      <DependentUpon>FakeScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\EasterEgg\OddEvenPage.resx">
+      <DependentUpon>OddEvenPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\EasterEgg\PickIconScene.resx">
+      <DependentUpon>PickIconScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\frmPage.resx">
+      <DependentUpon>frmPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\List\AchievementList01.resx">
+      <DependentUpon>AchievementList01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\List\CarList01.resx">
+      <DependentUpon>CarList01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\List\CoachList01.resx">
+      <DependentUpon>CoachList01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\List\CompanyList01.resx">
+      <DependentUpon>CompanyList01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\List\EngineCoachList01.resx">
+      <DependentUpon>EngineCoachList01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\List\LocomotiveList01.resx">
+      <DependentUpon>LocomotiveList01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\List\NewsList01.resx">
+      <DependentUpon>NewsList01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\List\RouteList01.resx">
+      <DependentUpon>RouteList01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\List\StationList01.resx">
+      <DependentUpon>StationList01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\List\StationList02.resx">
+      <DependentUpon>StationList02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\List\TrainList01.resx">
+      <DependentUpon>TrainList01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\AchievementListPage.resx">
+      <DependentUpon>AchievementListPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\BankPage.resx">
+      <DependentUpon>BankPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\CompanyListPage.resx">
+      <DependentUpon>CompanyListPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\NewsPage.resx">
+      <DependentUpon>NewsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\Operation_Main_Page.resx">
+      <DependentUpon>Operation_Main_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\RegionInfoPage.resx">
+      <DependentUpon>RegionInfoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\RouteAdd_Color_Page.resx">
+      <DependentUpon>RouteAdd_Color_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\RouteAdd_Name_Page.resx">
+      <DependentUpon>RouteAdd_Name_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\RouteAdd_Stations_List_Page.resx">
+      <DependentUpon>RouteAdd_Stations_List_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\RouteAdd_Stations_Page.resx">
+      <DependentUpon>RouteAdd_Stations_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\RouteAdd_Type_Page.resx">
+      <DependentUpon>RouteAdd_Type_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\RouteControl_Main_Page.resx">
+      <DependentUpon>RouteControl_Main_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\RouteControl_TrainList_Page.resx">
+      <DependentUpon>RouteControl_TrainList_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\RouteInfoPage.resx">
+      <DependentUpon>RouteInfoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\RouteListPage.resx">
+      <DependentUpon>RouteListPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\StationAdd_Etc_Page.resx">
+      <DependentUpon>StationAdd_Etc_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\StationAdd_Name_Page.resx">
+      <DependentUpon>StationAdd_Name_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\StationAdd_Region_Page.resx">
+      <DependentUpon>StationAdd_Region_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\StationInfoPage.resx">
+      <DependentUpon>StationInfoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\TrainAdd_NameType_Page.resx">
+      <DependentUpon>TrainAdd_NameType_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\TrainDataAdd_Args_Page.resx">
+      <DependentUpon>TrainDataAdd_Args_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\TrainDataAdd_Image_Page.resx">
+      <DependentUpon>TrainDataAdd_Image_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\TrainDataAdd_Name_Page.resx">
+      <DependentUpon>TrainDataAdd_Name_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\TrainListPage.resx">
+      <DependentUpon>TrainListPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\TrainList_OKAdd_Coach_Page.resx">
+      <DependentUpon>TrainList_OKAdd_Coach_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\TrainList_OKAdd_EngineCoach_Page.resx">
+      <DependentUpon>TrainList_OKAdd_EngineCoach_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\TrainList_OKAdd_Locomotive_Page.resx">
+      <DependentUpon>TrainList_OKAdd_Locomotive_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\TrainList_OKAdd_Page.resx">
+      <DependentUpon>TrainList_OKAdd_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Page\TrainWayPage.resx">
+      <DependentUpon>TrainWayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Scene\DefaultCreateGameScene.resx">
+      <DependentUpon>DefaultCreateGameScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Scene\DeveloperScene.resx">
+      <DependentUpon>DeveloperScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\frmError.resx">
+      <DependentUpon>frmError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\frmImage.resx">
+      <DependentUpon>frmImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Scene\GameLoadScene.resx">
+      <DependentUpon>GameLoadScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Scene\GameSettingScene.resx">
+      <DependentUpon>GameSettingScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Scene\ResSettingScene.resx">
+      <DependentUpon>ResSettingScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Scene\LangSettingScene.resx">
+      <DependentUpon>LangSettingScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Scene\MainPlayScene.resx">
+      <DependentUpon>MainPlayScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Scene\NewGameScene.resx">
+      <DependentUpon>NewGameScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Scene\GameStartScene.resx">
+      <DependentUpon>GameStartScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Scene\LogoScene.resx">
+      <DependentUpon>LogoScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Scene\MainMenuScene.resx">
+      <DependentUpon>MainMenuScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Scene\SettingScene.resx">
+      <DependentUpon>SettingScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Scene\SoundSettingScene.resx">
+      <DependentUpon>SoundSettingScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Scene\UpdateingScene.resx">
+      <DependentUpon>UpdateingScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTUI\Scene\UpdateSettingScene.resx">
+      <DependentUpon>UpdateSettingScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WinHttp">
+      <Guid>{662901FC-6951-4854-9EB2-D9A2570F2B2E}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RTRM\RTRM.vcxproj">
+      <Project>{e6825af9-904a-436d-ab85-c396f9d319aa}</Project>
+      <Name>RTRM</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="QuizAPI.dll" />
+    <EmbeddedResource Include="KStringExtension.dll" />
+    <Content Include="rt_icon_ico.ico" />
+    <EmbeddedResource Include="WinFormAnimation.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

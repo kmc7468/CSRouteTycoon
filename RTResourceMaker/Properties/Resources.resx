@@ -1,0 +1,876 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="data_color_dat" xml:space="preserve">
+    <value>// vars
+$game_textbtn_def_unsel_hex:#000000
+$game_textbtn_def_unsel_alpha:255
+$game_textbtn_def_sel_hex:#808080
+$game_textbtn_def_sel_alpha:255
+$game_title_def_hex:#000000
+$game_title_def_alpha:255
+
+// main
+main.sidebar.hex=#FFFFFF
+main.sidebar.alpha=70
+main.rectangle.hex=#FFFFFF
+main.rectangle.alpha=70
+
+main.menu.gamestart.unsel.hex=#FFFFFF
+main.menu.gamestart.unsel.alpha=255
+main.menu.gamestart.sel.hex=#808080
+main.menu.gamestart.sel.alpha=255
+
+main.menu.setting.unsel.hex=#FFFFFF
+main.menu.setting.unsel.alpha=255
+main.menu.setting.sel.hex=#808080
+main.menu.setting.sel.alpha=255
+
+main.menu.developer.unsel.hex=#FFFFFF
+main.menu.developer.unsel.alpha=255
+main.menu.developer.sel.hex=#808080
+main.menu.developer.sel.alpha=255
+
+main.menu.exit.unsel.hex=#FFFFFF
+main.menu.exit.unsel.alpha=255
+main.menu.exit.sel.hex=#808080
+main.menu.exit.sel.alpha=255
+
+// setting main
+setting.main.lang.unsel.hex=#FFFFFF
+setting.main.lang.unsel.alpha=255
+setting.main.lang.sel.hex=#808080
+setting.main.lang.sel.alpha=255
+
+setting.main.res.unsel.hex=#FFFFFF
+setting.main.res.unsel.alpha=255
+setting.main.res.sel.hex=#808080
+setting.main.res.sel.alpha=255
+
+setting.main.sound.unsel.hex=#FFFFFF
+setting.main.sound.unsel.alpha=255
+setting.main.sound.sel.hex=#808080
+setting.main.sound.sel.alpha=255
+
+setting.main.update.unsel.hex=#FFFFFF
+setting.main.update.unsel.alpha=255
+setting.main.update.sel.hex=#808080
+setting.main.update.sel.alpha=255
+
+setting.main.title.hex=#FFFFFF
+setting.main.title.alpha=255
+
+setting.main.back.unsel.hex=#FFFFFF
+setting.main.back.unsel.alpha=255
+setting.main.back.sel.hex=#808080
+setting.main.back.sel.alpha=255
+
+// lang setting
+setting.lang.title.hex=#FFFFFF
+setting.lang.title.alpha=255
+
+setting.lang.accept.unsel.hex=#FFFFFF
+setting.lang.accept.unsel.alpha=255
+setting.lang.accept.sel.hex=#808080
+setting.lang.accept.sel.alpha=255
+
+setting.lang.folder.unsel.hex=#FFFFFF
+setting.lang.folder.unsel.alpha=255
+setting.lang.folder.sel.hex=#808080
+setting.lang.folder.sel.alpha=255
+
+// res setting
+setting.res.title.hex=#FFFFFF
+setting.res.title.alpha=255
+
+setting.res.accept.unsel.hex=#FFFFFF
+setting.res.accept.unsel.alpha=255
+setting.res.accept.sel.hex=#808080
+setting.res.accept.sel.alpha=255
+
+setting.res.info.hex=#000000
+setting.res.info.alpha=255
+
+setting.res.folder.unsel.hex=#FFFFFF
+setting.res.folder.unsel.alpha=255
+setting.res.folder.sel.hex=#808080
+setting.res.folder.sel.alpha=255
+
+// sound setting
+setting.sound.title.hex=#FFFFFF
+setting.sound.title.alpha=255
+
+setting.sound.accept.unsel.hex=#FFFFFF
+setting.sound.accept.unsel.alpha=255
+setting.sound.accept.sel.hex=#808080
+setting.sound.accept.sel.alpha=255
+
+setting.sound.use.hex=#FFFFFF
+setting.sound.use.alpha=255
+
+setting.sound.url.hex=#FFFFFF
+setting.sound.url.alpha=255
+
+// update setting
+setting.update.title.hex=#FFFFFF
+setting.update.title.alpha=255
+
+setting.update.back.unsel.hex=#FFFFFF
+setting.update.back.unsel.alpha=255
+setting.update.back.sel.hex=#808080
+setting.update.back.sel.alpha=255
+
+setting.update.info.hex=#FFFFFF
+setting.update.info.alpha=255
+
+setting.update.goupdate.unsel.hex=#FFFFFF
+setting.update.goupdate.unsel.alpha=255
+setting.update.goupdate.sel.hex=#808080
+setting.update.goupdate.sel.alpha=255
+
+setting.update.textprogress.hex=#FFFFFF
+setting.update.textprogress.alpha=255
+
+setting.update.progressbar.caption.hex=#0066CC
+setting.update.progressbar.caption.alpha=255
+
+setting.update.progressbar.bar.hex=#3399FF
+setting.update.progressbar.bar.alpha=255
+
+setting.update.progressbar.backcolor.hex=#FFFFFF
+setting.update.progressbar.backcolor.alpha=25
+
+// gamestart
+gamestart.title.hex=#000000
+gamestart.title.alpha=255
+
+gamestart.newgame.unsel.hex=#FFFFFF
+gamestart.newgame.unsel.alpha=255
+gamestart.newgame.sel.hex=#808080
+gamestart.newgame.sel.alpha=255
+
+gamestart.gameload.unsel.hex=#FFFFFF
+gamestart.gameload.unsel.alpha=255
+gamestart.gameload.sel.hex=#808080
+gamestart.gameload.sel.alpha=255
+
+gamestart.multi.unsel.hex=#FFFFFF
+gamestart.multi.unsel.alpha=255
+gamestart.multi.sel.hex=#808080
+gamestart.multi.sel.alpha=255
+
+gamestart.back.unsel.hex=#FFFFFF
+gamestart.back.unsel.alpha=255
+gamestart.back.sel.hex=#808080
+gamestart.back.sel.alpha=255
+
+
+// newgame
+newgame.title.hex=#FFFFFF
+newgame.title.alpha=255
+
+newgame.career.unsel.hex=#FFFFFF
+newgame.career.unsel.alpha=255
+newgame.career.sel.hex=#808080
+newgame.career.sel.alpha=255
+
+newgame.default.unsel.hex=#FFFFFF
+newgame.default.unsel.alpha=255
+newgame.default.sel.hex=#808080
+newgame.default.sel.alpha=255
+
+newgame.sandbox.unsel.hex=#FFFFFF
+newgame.sandbox.unsel.alpha=255
+newgame.sandbox.sel.hex=#808080
+newgame.sandbox.sel.alpha=255
+
+newgame.back.unsel.hex=#FFFFFF
+newgame.back.unsel.alpha=255
+newgame.back.sel.hex=#808080
+newgame.back.sel.alpha=255
+
+// gameload
+gameload.title.hex=#FFFFFF
+gameload.title.alpha=255
+
+gameload.back.unsel.hex=#FFFFFF
+gameload.back.unsel.alpha=255
+gameload.back.sel.hex=#808080
+gameload.back.sel.alpha=255
+
+gameload.info.hex=#FFFFFF
+gameload.info.alpha=255
+
+gameload.start.hex=#FFFFFF
+gameload.start.alpha=255
+
+// default creategame
+creategame.default.title.hex=#FFFFFF
+creategame.default.title.alpha=255
+
+creategame.default.message.hex=#FFFFFF
+creategame.default.message.alpha=255
+
+creategame.default.defaultlogo.hex=#000000
+creategame.default.defaultlogo.alpha=255
+
+creategame.default.browse.unsel.hex=#000000
+creategame.default.browse.unsel.alpha=255
+creategame.default.browse.sel.hex=#808080
+creategame.default.browse.sel.alpha=255
+
+creategame.default.goodsize.hex=#000000
+creategame.default.goodsize.alpha=255
+
+creategame.default.back.unsel.hex=#FFFFFF
+creategame.default.back.unsel.alpha=255
+creategame.default.back.sel.hex=#808080
+creategame.default.back.sel.alpha=255
+
+creategame.default.next.unsel.hex=#FFFFFF
+creategame.default.next.unsel.alpha=255
+creategame.default.next.sel.hex=#808080
+creategame.default.next.sel.alpha=255
+
+creategame.default.logo.hex=#000000
+creategame.default.logo.alpha=255
+
+creategame.default.ai.hex=#000000
+creategame.default.ai.alpha=255
+
+creategame.default.overwrite.hex=#000000
+creategame.default.overwrite.alpha=255
+
+creategame.default.mapdev.hex=#FFFFFF
+creategame.default.mapdev.alpha=255
+
+// play
+play.btnline.hex=#FFFFFF
+play.btnline.alpha=255
+
+play.topbar.companyname.hex=#FFFFFF
+play.topbar.companyname.alpha=255
+
+play.topbar.presidentname.hex=#FFFFFF
+play.topbar.presidentname.alpha=255
+
+play.topbar.money.hex=#FFFFFF
+play.topbar.money.alpha=255
+
+play.topbar.income.hex=#FFFFFF
+play.topbar.income.alpha=255
+
+play.topbar.date.hex=#FFFFFF
+play.topbar.date.alpha=255
+
+play.route.sel.hex=#FFFFFF
+play.route.sel.alpha=100
+
+play.train.sel.hex=#FFFFFF
+play.train.sel.alpha=100
+
+play.bank.sel.hex=#FFFFFF
+play.bank.sel.alpha=100
+
+play.news.sel.hex=#FFFFFF
+play.news.sel.alpha=100
+
+play.company.sel.hex=#FFFFFF
+play.company.sel.alpha=100
+
+play.timetable.sel.hex=#FFFFFF
+play.timetable.sel.alpha=100
+
+play.book.sel.hex=#FFFFFF
+play.book.sel.alpha=100
+
+play.text.company.hex=#FFFFFF
+play.text.company.alpha=255
+
+play.text.president.hex=#FFFFFF
+play.text.president.alpha=255
+
+play.text.money.hex=#FFFFFF
+play.text.money.alpha=255
+play.text.money.many.hex=#FF0000
+play.text.money.many.alpha=255
+play.text.money.little.hex=#FF0000
+play.text.money.little.alpha=255
+
+play.text.income.zero.hex=#FFFFFF
+play.text.income.zero.alpha=255
+play.text.income.plus.hex=#008000
+play.text.income.plus.alpha=255
+play.text.income.minus.hex=#FF0000
+play.text.income.minus.alpha=255
+
+play.text.date.hex=#FFFFFF
+play.text.date.alpha=255
+
+play.bankruptcy.hex=#000000
+play.bankruptcy.alpha=200
+
+play.bankruptcy.title.hex=#FFFFFF
+play.bankruptcy.title.alpha=255
+
+play.bankruptcy.bank.unsel.hex=#FFFFFF
+play.bankruptcy.bank.unsel.alpha=255
+play.bankruptcy.bank.sel.hex=#D3D3D3
+play.bankruptcy.bank.sel.alpha=255
+
+play.bankruptcy.delete.unsel.hex=#FFFFFF
+play.bankruptcy.delete.unsel.alpha=255
+play.bankruptcy.delete.sel.hex=#D3D3D3
+play.bankruptcy.delete.sel.alpha=255
+
+play.bankruptcy.view.unsel.hex=#FFFFFF
+play.bankruptcy.view.unsel.alpha=255
+play.bankruptcy.view.sel.hex=#D3D3D3
+play.bankruptcy.view.sel.alpha=255
+
+play.city.hex=#FFFFFF
+play.city.alpha=0
+
+// page
+page.title.hex=#FFFFFF
+page.title.alpha=255
+
+// routelist
+routelist.title.hex=$game_title_def_hex
+routelist.title.alpha=$game_title_def_alpha
+
+routelist.list.hex=#dbdbdb
+routelist.list.alpha=255
+
+routelist.page.hex=#000000
+routelist.page.alpha=255
+
+routelist.addroute.unsel.hex=$game_textbtn_def_unsel_hex
+routelist.addroute.unsel.alpha=$game_textbtn_def_unsel_alpha
+routelist.addroute.sel.hex=$game_textbtn_def_sel_hex
+routelist.addroute.sel.alpha=$game_textbtn_def_sel_alpha
+
+routelist.search.unsel.hex=$game_textbtn_def_unsel_hex
+routelist.search.unsel.alpha=$game_textbtn_def_unsel_alpha
+routelist.search.sel.hex=$game_textbtn_def_sel_hex
+routelist.search.sel.alpha=$game_textbtn_def_sel_alpha
+
+// routeadd
+routeadd.title.hex=$game_title_def_hex
+routeadd.title.alpha=$game_title_def_alpha
+
+routeadd.next.unsel.hex=$game_textbtn_def_unsel_hex
+routeadd.next.unsel.alpha=$game_textbtn_def_unsel_alpha
+routeadd.next.sel.hex=$game_textbtn_def_sel_hex
+routeadd.next.sel.alpha=$game_textbtn_def_sel_alpha
+
+routeadd.back.unsel.hex=$game_textbtn_def_unsel_hex
+routeadd.back.unsel.alpha=$game_textbtn_def_unsel_alpha
+routeadd.back.sel.hex=$game_textbtn_def_sel_hex
+routeadd.back.sel.alpha=$game_textbtn_def_sel_alpha
+
+routeadd.color.h.hex=#000000
+routeadd.color.h.alpha=255
+
+routeadd.list.hex=#dbdbdb
+routeadd.list.alpha=255
+
+routeadd.page.hex=#000000
+routeadd.page.alpha=255
+
+routeadd.sta.add.unsel.hex=$game_textbtn_def_unsel_hex
+routeadd.sta.add.unsel.alpha=$game_textbtn_def_unsel_alpha
+routeadd.sta.add.sel.hex=$game_textbtn_def_sel_hex
+routeadd.sta.add.sel.alpha=$game_textbtn_def_sel_alpha
+
+routeadd.sta.addlist.unsel.hex=$game_textbtn_def_unsel_hex
+routeadd.sta.addlist.unsel.alpha=$game_textbtn_def_unsel_alpha
+routeadd.sta.addlist.sel.hex=$game_textbtn_def_sel_hex
+routeadd.sta.addlist.sel.alpha=$game_textbtn_def_sel_alpha
+
+routeadd.doubleinfo.hex=#000000
+routeadd.doubleinfo.alpha=255
+
+routeadd.search.unsel.hex=$game_textbtn_def_unsel_hex
+routeadd.search.unsel.alpha=$game_textbtn_def_unsel_alpha
+routeadd.search.sel.hex=$game_textbtn_def_sel_hex
+routeadd.search.sel.alpha=$game_textbtn_def_sel_alpha
+
+// station add
+stationadd.title.hex=$game_title_def_hex
+stationadd.title.alpha=$game_title_def_alpha
+
+stationadd.next.unsel.hex=$game_textbtn_def_unsel_hex
+stationadd.next.unsel.alpha=$game_textbtn_def_unsel_alpha
+stationadd.next.sel.hex=$game_textbtn_def_sel_hex
+stationadd.next.sel.alpha=$game_textbtn_def_sel_alpha
+
+stationadd.back.unsel.hex=$game_textbtn_def_unsel_hex
+stationadd.back.unsel.alpha=$game_textbtn_def_unsel_alpha
+stationadd.back.sel.hex=$game_textbtn_def_sel_hex
+stationadd.back.sel.alpha=$game_textbtn_def_sel_alpha
+
+stationadd.add.unsel.hex=$game_textbtn_def_unsel_hex
+stationadd.add.unsel.alpha=$game_textbtn_def_unsel_alpha
+stationadd.add.sel.hex=$game_textbtn_def_sel_hex
+stationadd.add.sel.alpha=$game_textbtn_def_sel_alpha
+
+// routecontrol main
+routecontrol.title.hex=$game_title_def_hex
+routecontrol.title.alpha=$game_title_def_alpha
+
+routecontrol.create.hex=#000000
+routecontrol.create.alpha=255
+
+routecontrol.back.unsel.hex=$game_textbtn_def_unsel_hex
+routecontrol.back.unsel.alpha=$game_textbtn_def_unsel_alpha
+routecontrol.back.sel.hex=$game_textbtn_def_sel_hex
+routecontrol.back.sel.alpha=$game_textbtn_def_sel_alpha
+
+routecontrol.moreinfo.unsel.hex=$game_textbtn_def_unsel_hex
+routecontrol.moreinfo.unsel.alpha=$game_textbtn_def_unsel_alpha
+routecontrol.moreinfo.sel.hex=$game_textbtn_def_sel_hex
+routecontrol.moreinfo.sel.alpha=$game_textbtn_def_sel_alpha
+
+routecontrol.info.hex=#dbdbdb
+routecontrol.info.alpha=255
+
+routecontrol.setting.unsel.hex=#A9A9A9
+routecontrol.setting.unsel.alpha=255
+routecontrol.setting.sel.hex=#808080
+routecontrol.setting.sel.alpha=255
+
+routecontrol.delete.unsel.hex=#e74c3c
+routecontrol.delete.unsel.alpha=255
+routecontrol.delete.sel.hex=#c0392b
+routecontrol.delete.sel.alpha=255
+
+routecontrol.infotext.hex=#000000
+routecontrol.infotext.alpha=255
+
+routecontrol.draw.hex=#000000
+routecontrol.draw.alpha=255
+
+// routecontrol.train
+routecontrol.train.title.hex=$game_title_def_hex
+routecontrol.train.title.alpha=$game_title_def_alpha
+
+routecontrol.train.page.hex=#000000
+routecontrol.train.page.alpha=255
+
+routecontrol.train.accept.unsel.hex=$game_textbtn_def_unsel_hex
+routecontrol.train.accept.unsel.alpha=$game_textbtn_def_unsel_alpha
+routecontrol.train.accept.sel.hex=$game_textbtn_def_sel_hex
+routecontrol.train.accept.sel.alpha=$game_textbtn_def_sel_alpha
+
+routecontrol.train.list.background.hex=#dbdbdb
+routecontrol.train.list.background.alpha=255
+
+// trainadd
+trainadd.back.unsel.hex=$game_textbtn_def_unsel_hex
+trainadd.back.unsel.alpha=$game_textbtn_def_unsel_alpha
+trainadd.back.sel.hex=$game_textbtn_def_sel_hex
+trainadd.back.sel.alpha=$game_textbtn_def_sel_alpha
+
+trainadd.add.unsel.hex=$game_textbtn_def_unsel_hex
+trainadd.add.unsel.alpha=$game_textbtn_def_unsel_alpha
+trainadd.add.sel.hex=$game_textbtn_def_sel_hex
+trainadd.add.sel.alpha=$game_textbtn_def_sel_alpha
+
+trainadd.title.hex=$game_title_def_hex
+trainadd.title.alpha=$game_title_def_alpha
+
+// traindataadd
+traindataadd.title.hex=$game_title_def_hex
+traindataadd.title.alpha=$game_title_def_alpha
+
+traindataadd.back.unsel.hex=$game_textbtn_def_unsel_hex
+traindataadd.back.unsel.alpha=$game_textbtn_def_unsel_alpha
+traindataadd.back.sel.hex=$game_textbtn_def_sel_hex
+traindataadd.back.sel.alpha=$game_textbtn_def_sel_alpha
+
+traindataadd.next.unsel.hex=$game_textbtn_def_unsel_hex
+traindataadd.next.unsel.alpha=$game_textbtn_def_unsel_alpha
+traindataadd.next.sel.hex=$game_textbtn_def_sel_hex
+traindataadd.next.sel.alpha=$game_textbtn_def_sel_alpha
+
+traindataadd.info.hex=#000000
+traindataadd.info.alpha=255
+
+traindataadd.page.hex=#000000
+traindataadd.page.alpha=255
+
+traindataadd.list.hex=#dbdbdb
+traindataadd.list.alpha=255
+
+traindataadd.addloc.unsel.hex=$game_textbtn_def_unsel_hex
+traindataadd.addloc.unsel.alpha=$game_textbtn_def_unsel_alpha
+traindataadd.addloc.sel.hex=$game_textbtn_def_sel_hex
+traindataadd.addloc.sel.alpha=$game_textbtn_def_sel_alpha
+
+traindataadd.addcar.unsel.hex=$game_textbtn_def_unsel_hex
+traindataadd.addcar.unsel.alpha=$game_textbtn_def_unsel_alpha
+traindataadd.addcar.sel.hex=$game_textbtn_def_unsel_hex
+traindataadd.addcar.sel.alpha=$game_textbtn_def_unsel_alpha
+
+// okadd locomotive
+okaddlocomotive.title.hex=$game_title_def_hex
+okaddlocomotive.title.alpha=$game_title_def_alpha
+
+okaddlocomotive.page.hex=#000000
+okaddlocomotive.page.alpha=255
+
+okaddlocomotive.list.hex=#dbdbdb
+okaddlocomotive.list.alpha=255
+
+okaddlocomotive.add.unsel.hex=$game_textbtn_def_unsel_hex
+okaddlocomotive.add.unsel.alpha=$game_textbtn_def_unsel_alpha
+okaddlocomotive.add.sel.hex=$game_textbtn_def_sel_hex
+okaddlocomotive.add.sel.alpha=$game_textbtn_def_sel_alpha
+
+// okadd carriage
+okaddcarriage.title.hex=$game_title_def_hex
+okaddcarriage.title.alpha=$game_title_def_alpha
+
+okaddcarriage.page.hex=#000000
+okaddcarriage.page.alpha=255
+
+okaddcarriage.list.hex=#dbdbdb
+okaddcarriage.list.alpha=255
+
+okaddcarriage.add.unsel.hex=$game_textbtn_def_unsel_hex
+okaddcarriage.add.unsel.alpha=$game_textbtn_def_unsel_alpha
+okaddcarriage.add.sel.hex=$game_textbtn_def_sel_hex
+okaddcarriage.add.sel.alpha=$game_textbtn_def_sel_alpha
+
+// okaddtain
+okaddtrain.add.unsel.hex=$game_textbtn_def_unsel_hex
+okaddtrain.add.unsel.alpha=$game_textbtn_def_unsel_alpha
+okaddtrain.add.sel.hex=$game_textbtn_def_sel_hex
+okaddtrain.add.sel.alpha=$game_textbtn_def_sel_alpha
+
+okaddtrain.title.hex=$game_title_def_hex
+okaddtrain.title.alpha=$game_title_def_alpha
+
+okaddtrain.list.hex=#dbdbdb
+okaddtrain.list.alpha=255
+
+okaddtrain.page.hex=#000000
+okaddtrain.page.alpha=255
+
+// regioninfo
+regioninfo.title.hex=$game_title_def_hex
+regioninfo.title.alpha=$game_title_def_alpha
+
+regioninfo.reginfo.hex=#000000
+regioninfo.reginfo.alpha=255
+
+regioninfo.cityinfo.hex=#000000
+regioninfo.cityinfo.alpha=255
+
+// news
+news.title.hex=$game_title_def_hex
+news.title.alpha=$game_title_def_alpha
+
+news.page.hex=#000000
+news.page.alpha=255
+
+news.showtooltip.hex=#000000
+news.showtooltip.alpha=255
+
+news.list.hex=#dbdbdb
+news.list.alpha=255
+
+// trainlist
+trainlist.title.hex=$game_title_def_hex
+trainlist.title.alpha=$game_title_def_alpha
+
+trainlist.page.hex=#000000
+trainlist.page.alpha=255
+
+trainlist.list.hex=#dbdbdb
+trainlist.list.alpha=255
+
+trainlist.search.unsel.hex=$game_textbtn_def_unsel_hex
+trainlist.search.unsel.alpha=$game_textbtn_def_unsel_alpha
+trainlist.search.sel.hex=$game_textbtn_def_sel_hex
+trainlist.search.sel.alpha=$game_textbtn_def_sel_alpha
+
+// bank
+bank.sidebar.hex=#bfbfbf
+bank.sidebar.alpha=255
+
+bank.sidebar.item.unsel.hex=#FFFFFF
+bank.sidebar.item.unsel.alpha=255
+bank.sidebar.item.sel.hex=#aaaaaa
+bank.sidebar.item.sel.alpha=255
+bank.sidebar.item.select.hex=#808080
+bank.sidebar.item.select.alpha=255
+
+bank.rect.hex=#d2d2d2
+bank.rect.alpha=255
+
+bank.title.hex=$game_title_def_hex
+bank.title.alpha=$game_title_def_alpha
+
+bank.subtitle.hex=$game_title_def_hex
+bank.subtitle.alpha=$game_title_def_alpha
+
+bank.btn.unsel.hex=$game_textbtn_def_unsel_hex
+bank.btn.unsel.alpha=$game_textbtn_def_unsel_alpha
+bank.btn.sel.hex=$game_textbtn_def_sel_hex
+bank.btn.sel.alpha=$game_textbtn_def_sel_alpha
+
+// companylist
+companylist.title.hex=$game_title_def_hex
+companylist.title.alpha=$game_title_def_alpha
+
+companylist.page.hex=#000000
+companylist.page.alpha=255
+
+companylist.list.hex=#dbdbdb
+companylist.list.alpha=255
+
+// achievementlist
+achievementlist.title.hex=#000000
+achievementlist.title.alpha=255
+
+achievementlist.page.hex=#000000
+achievementlist.page.alpha=255
+
+achievementlist.list.hex=#dbdbdb
+achievementlist.list.alpha=255
+
+// routeinfo
+routeinfo.back.unsel.hex=$game_textbtn_def_unsel_hex
+routeinfo.back.unsel.alpha=$game_textbtn_def_unsel_alpha
+routeinfo.back.sel.hex=$game_textbtn_def_sel_hex
+routeinfo.back.sel.alpha=$game_textbtn_def_sel_alpha
+
+routeinfo.title.hex=#000000
+routeinfo.title.alpha=255
+
+routeinfo.info.hex=#000000
+routeinfo.info.alpha=255
+
+routeinfo.usemoney.hex=#000000
+routeinfo.usemoney.alpha=255
+
+// 유저가 만족하지 않는 이용료로 책정 했을때
+routeinfo.usernotpre.hex=#e74c3c
+routeinfo.usernotpre.alpha=255
+
+// stationinfo
+stationinfo.back.unsel.hex=$game_textbtn_def_unsel_hex
+stationinfo.back.unsel.alpha=$game_textbtn_def_unsel_alpha
+stationinfo.back.sel.hex=$game_textbtn_def_sel_hex
+stationinfo.back.sel.alpha=$game_textbtn_def_sel_alpha
+
+stationinfo.title.hex=#000000
+stationinfo.title.alpha=255
+
+stationinfo.info.hex=#000000
+stationinfo.info.alpha=255
+
+// list
+list.routelist01.name.hex=#000000
+list.routelist01.name.alpha=255
+list.routelist01.background.sel.hex=#C0C0C0
+list.routelist01.background.sel.alpha=255
+
+list.stationlist01.name.hex=#000000
+list.stationlist01.name.alpha=255
+list.stationlist01.background.sel.hex=#C0C0C0
+list.stationlist01.background.sel.alpha=255
+list.stationlist01.background.select.hex=#A9A9A9
+list.stationlist01.background.select.alpha=255
+
+list.stationlist02.name.hex=#000000
+list.stationlist02.name.alpha=255
+list.stationlist02.background.sel.hex=#C0C0C0
+list.stationlist02.background.sel.alpha=255
+list.stationlist02.background.select.hex=#A9A9A9
+list.stationlist02.background.select.alpha=255
+
+list.trainlist01.name.hex=#000000
+list.trainlist01.name.alpha=255
+list.trainlist01.background.sel.hex=#C0C0C0
+list.trainlist01.background.sel.alpha=255
+list.trainlist01.background.select.hex=#A9A9A9
+list.trainlist01.background.select.alpha=255
+
+list.carlist01.name.hex=#000000
+list.carlist01.name.alpha=255
+list.carlist01.background.sel.hex=#C0C0C0
+list.carlist01.background.sel.alpha=255
+list.carlist01.background.select.hex=#A9A9A9
+list.carlist01.background.select.alpha=255
+
+list.locomotivelist01.texts.hex=#000000
+list.locomotivelist01.texts.alpha=255
+list.locomotivelist01.background.sel.hex=#C0C0C0
+list.locomotivelist01.background.sel.alpha=255
+list.locomotivelist01.background.select.hex=#A9A9A9
+list.locomotivelist01.background.select.alpha=255
+
+list.carriagelist01.texts.hex=#000000
+list.carriagelist01.texts.alpha=255
+list.carriagelist01.background.sel.hex=#C0C0C0
+list.carriagelist01.background.sel.alpha=255
+list.carriagelist01.background.select.hex=#A9A9A9
+list.carriagelist01.background.select.alpha=255
+
+list.newslist01.msg.hex=#000000
+list.newslist01.msg.alpha=255
+list.newslist01.background.sel.hex=#C0C0C0
+list.newslist01.background.sel.alpha=255
+list.newslist01.date.hex=#000000
+list.newslist01.date.alpha=255
+
+list.companylist01.text.hex=#000000
+list.companylist01.text.alpha=255
+list.companylist01.background.sel.hex=#C0C0C0
+list.companylist01.background.sel.alpha=255
+
+list.achievementlist01.texts.hex=#000000
+list.achievementlist01.texts.alpha=255
+list.achievementlist01.background.sel.hex=#C0C0C0
+list.achievementlist01.background.sel.alpha=255</value>
+    <comment>Default data_color dat file</comment>
+  </data>
+  <data name="images_hides" xml:space="preserve">
+    <value>atus_white.png
+rt_logo.png
+routeadd_shadow.png
+rt_icon_img.png
+rt_icon_ico.ico</value>
+    <comment>Default hide images</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="music_file" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\music-file.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rtrmlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rtrmlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sounds_hides" xml:space="preserve">
+    <value>hamjung.wav</value>
+    <comment>Default hid sounds</comment>
+  </data>
+</root>
